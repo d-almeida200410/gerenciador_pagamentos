@@ -1,0 +1,143 @@
+/* Estilo Geral */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eaf8ff; /* Fundo azul claro */
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.formulario,
+.lista-alunos,
+.pagamentos {
+  background-color: #ffffff; /* Branco */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 280px;
+  border: 4px solid transparent;
+}
+
+/* Cores das colunas no desktop */
+@media (min-width: 768px) {
+  .formulario {
+    border-color: #ffbd59; /* Laranja */
+  }
+  .lista-alunos {
+    border-color: #57e57f; /* Verde */
+  }
+  .pagamentos {
+    border-color: #59a9ff; /* Azul */
+  }
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Botões Menores */
+button {
+  width: auto;
+  padding: 6px 12px;
+  background-color: #007bff; /* Azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Azul escuro */
+}
+
+.excluir-btn {
+  background-color: #dc3545; /* Vermelho */
+}
+
+.excluir-btn:hover {
+  background-color: #a71d2a; /* Vermelho escuro */
+}
+
+/* Listas */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nenhum-aluno,
+.nenhum-mes {
+  font-style: italic;
+  color: #888;
+}
+
+/* Fundo colorido nos itens */
+li span {
+  background-color: #f0f8ff; /* Azul claro */
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .formulario,
+  .lista-alunos,
+  .pagamentos {
+    flex: 1 1 100%;
+  }
+}
+
+/* Quando o cursor passar sobre os nomes dos alunos */
+.aluno-item span {
+  cursor: pointer; /* Isso faz com que o cursor se torne um 'pointer' */
+  transition: color 0.3s ease; /* Adiciona uma animação suave de cor */
+}
+
+.aluno-item span:hover {
+  color: #007bff; /* Muda a cor do nome quando o mouse passar por cima */
+}
+.gerar-pdf-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.gerar-pdf-btn:hover {
+  background-color: #0056b3;
+}
