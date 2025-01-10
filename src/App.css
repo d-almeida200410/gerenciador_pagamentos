@@ -109,12 +109,18 @@ li span {
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+    padding: 10px;
   }
 
   .formulario,
   .lista-alunos,
   .pagamentos {
     flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  h1, h2, h3, h4 {
+    text-align: center;
   }
 }
 
@@ -127,6 +133,7 @@ li span {
 .aluno-item span:hover {
   color: #007bff; /* Muda a cor do nome quando o mouse passar por cima */
 }
+
 .gerar-pdf-btn {
   background-color: #007bff;
   color: white;
